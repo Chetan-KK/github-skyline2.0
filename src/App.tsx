@@ -8,7 +8,7 @@ function App() {
     <main>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:username" element={<SkylinePage />} />
+        <Route path="/:username/:year" element={<SkylinePage />} />
       </Routes>
     </main>
   );

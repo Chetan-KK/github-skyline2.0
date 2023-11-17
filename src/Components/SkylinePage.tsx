@@ -5,7 +5,7 @@ import Exprerience from "./Exprerience";
 import { Leva } from "leva";
 
 const SkylinePage = () => {
-  const { username } = useParams();
+  const { username, year } = useParams();
 
   const [contributionCount, setContributionCount] = useState<any>([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,6 @@ const SkylinePage = () => {
   async function getContributions() {
     const token = import.meta.env.VITE_GITHUB_TOKEN;
 
-    const year = 2023;
     const headers = {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
@@ -60,7 +59,7 @@ const SkylinePage = () => {
       contributions.forEach((week: any) => {
         const weekArray = [];
         week.contributionDays.forEach((day: any) => {
-          weekArray.push(day.contributionCount);
+          weekArray.push(day.contributionCount / 2);
         });
 
         // Pad the array with zeros if there are less than 7 values
@@ -91,13 +90,16 @@ const SkylinePage = () => {
             <Canvas
               shadows
               camera={{
+                fov: 45,
                 near: 0.1,
-                far: 100,
+                far: 500,
+                position: [5, 5, 7],
               }}
             >
               <Exprerience
                 contributionCount={contributionCount}
                 username={username}
+                year={year}
               />
             </Canvas>
           </>
