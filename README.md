@@ -10,10 +10,9 @@ We missed this feature so much that we decided to recreate GitHub Skyline 2.0! �
 ![image](https://github.com/Chetan-KK/github-skyline2.0/assets/75563673/f37e6bea-f860-46a1-a4a2-8f2803806b36)
 
 
-# community ideas
+# features
 
 - Interactive data visualizations of your GitHub profile and activity over time 📊
-- Charts showing your top repositories, languages used, contribution activity, habits, and more 🔢
 - Ability to make your Skyline public and share with others ✨
 - A personalized overview of your GitHub presence in an easy to understand format 💡
 
