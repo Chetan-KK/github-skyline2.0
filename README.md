@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# GitHub Skyline 2.0 📈
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bringing back GitHub's loved Skyline feature for personalized data visualizations 🌄
 
-Currently, two official plugins are available:
+GitHub unfortunately discontinued their awesome Skyline feature in 2022, which provided interactive visualizations of users' GitHub profiles and activity. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+We missed this feature so much that we decided to recreate GitHub Skyline 2.0! 🥳
 
-## Expanding the ESLint configuration
+# Snapshots 
+![image](https://github.com/Chetan-KK/github-skyline2.0/assets/75563673/f37e6bea-f860-46a1-a4a2-8f2803806b36)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+# community ideas
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Interactive data visualizations of your GitHub profile and activity over time 📊
+- Charts showing your top repositories, languages used, contribution activity, habits, and more 🔢
+- Ability to make your Skyline public and share with others ✨
+- A personalized overview of your GitHub presence in an easy to understand format 💡
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contributing 🤝
+
+We welcome contributions to help improve GitHub Skyline stay alive in our hearts ♥! 
+
+Some ideas:
+
+- ✨ Add more visualizations and graph types 
+- 🎨 Improve overall design and aesthetics
+- 🐛 Fix bugs or issues you find
+- 🌐 Add support for multiple languages
+
+Let's bring back the GitHub Skyline feature we know and love! 💖
+
+follow us on linkedin:
+
+Chetan Khulage:
+[https://www.linkedin.com/in/chetan-khulage]
+
+anurag k.
+[https://www.linkedin.com/in/anurag-kanade/]
