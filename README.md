@@ -30,10 +30,4 @@ Some ideas:
 
 Let's bring back the GitHub Skyline feature we know and love! 💖
 
-follow us on linkedin:
 
-Chetan Khulage:
-[https://www.linkedin.com/in/chetan-khulage]
-
-anurag k.
-[https://www.linkedin.com/in/anurag-kanade/]
