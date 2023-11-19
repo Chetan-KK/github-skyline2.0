@@ -2,6 +2,7 @@ import {
   BakeShadows,
   Center,
   Environment,
+  Html,
   OrbitControls,
   Text,
   Text3D,
@@ -19,7 +20,8 @@ import py from "/environmentMap/py.png";
 import ny from "/environmentMap/ny.png";
 import pz from "/environmentMap/pz.png";
 import nz from "/environmentMap/nz.png";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useThree } from "@react-three/fiber";
 
 type props = {
   contributionCount: Number[][];
@@ -30,11 +32,32 @@ type props = {
 const Exprerience = (props: props) => {
   const model = useGLTF("/models/base.glb");
 
-  console.log(model);
+  const { gl, scene, camera } = useThree();
 
-  const uiControl = useControls("perf", {
-    visible: true,
-  });
+  const captureSnapshot = () => {
+    gl.render(scene, camera);
+
+    const dataURL = gl.domElement.toDataURL("image/png");
+
+    // Create a temporary <a> element to trigger the download
+    const link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "snapshot.png";
+    document.body.appendChild(link);
+
+    // Simulate a click on the link to trigger the download
+    link.click();
+
+    // Clean up the temporary <a> element
+    document.body.removeChild(link);
+  };
+
+  /**
+   * controls
+   */
+  // const uiControl = useControls("perf", {
+  //   visible: true,
+  // });
 
   // useFrame((state, delta) => {});
 
@@ -50,16 +73,17 @@ const Exprerience = (props: props) => {
       {/* <BakeShadows /> */}
       <color args={["#242424"]} attach={"background"} />
       <Environment files={[px, nx, py, ny, pz, nz]} />
+
       {/**
        * performance monitor
        */}
-      {uiControl.visible ? <Perf position="top-left" /> : null}
+      {/* {uiControl.visible ? <Perf position="top-left" /> : null} */}
+
       {/**
        * orbit controls
        */}
 
-      {/* <OrbitControls maxPolarAngle={Math.PI / 2} /> */}
-      <OrbitControls />
+      <OrbitControls maxPolarAngle={Math.PI / 2} />
 
       {/**
        * lights
@@ -175,6 +199,14 @@ const Exprerience = (props: props) => {
             <meshStandardMaterial color="red" roughness={0} metalness={1} />
           </Text3D>
         )}
+        <Html>
+          <button
+            className="button absolute top-[40vh] right-[15vw] bg-red-100 whitespace-nowrap"
+            onClick={captureSnapshot}
+          >
+            Capture snapshot
+          </button>
+        </Html>
       </group>
     </>
   );

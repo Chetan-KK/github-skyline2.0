@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import Exprerience from "./Exprerience";
-import { Leva } from "leva";
 
 const SkylinePage = () => {
   const { username, year } = useParams();
@@ -71,7 +70,6 @@ const SkylinePage = () => {
         weeklyContributions.push(weekArray);
       });
 
-      // Log the result
       setContributionCount(weeklyContributions);
       setLoading(false);
     } catch (error) {
@@ -86,7 +84,7 @@ const SkylinePage = () => {
           <h2>loading...</h2>
         ) : (
           <>
-            <Leva collapsed />
+            {/* <Leva collapsed /> */}
             <Canvas
               shadows
               camera={{
