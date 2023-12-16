@@ -1,5 +1,5 @@
 import {
-  BakeShadows,
+  // BakeShadows,
   Center,
   Environment,
   Html,
@@ -7,11 +7,11 @@ import {
   Text,
   Text3D,
   useGLTF,
-  useHelper,
+  // useHelper,
 } from "@react-three/drei";
 // import { useFrame } from "@react-three/fiber";
-import { useControls } from "leva";
-import { Perf } from "r3f-perf";
+// import { useControls } from "leva";
+// import { Perf } from "r3f-perf";
 // import * as THREE from "three";
 
 import px from "/environmentMap/px.png";
@@ -20,7 +20,7 @@ import py from "/environmentMap/py.png";
 import ny from "/environmentMap/ny.png";
 import pz from "/environmentMap/pz.png";
 import nz from "/environmentMap/nz.png";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useThree } from "@react-three/fiber";
 
 type props = {
